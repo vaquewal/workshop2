@@ -1,0 +1,130 @@
+@mixin productos($celeste,$subtitulo,$titulo){
+	display: inline-block;
+	width: 24.6%;
+	margin: 20px 0;
+	img {
+		margin: 3px 0;
+		width: 100%;
+	}
+	h1 {
+		color: $celeste;
+		font-family: $subtitulo;
+		text-transform: uppercase;
+		font-size: 16px;
+		letter-spacing: 2px;
+		text-align: center;
+		margin: 25px 0;
+	}
+	h2{
+		text-align: center;
+		color: black;
+		font-family: $titulo;
+		margin: 25px 0;
+		font-size: 20px;
+		font-weight: bold;	
+
+	}
+	p{
+		color: $gris;
+		text-transform: uppercase;
+		text-align-last: center;
+		font-family: $subtitulo;
+		margin: 25px 0;
+	}
+}
+
+@mixin news($celeste,$titulo,$texto){
+	display: inline-block;
+	width: 30.5%;
+	h1 {
+		text-align: left;
+		color: black;
+		font-family: $titulo;
+		margin: 25px 0;
+		font-size: 20px;
+		font-weight: bold;	
+	}
+	img {
+		width: 100%;
+		height: 250px;
+	}
+	p {
+		text-align-last: left;
+		font-family: $texto;
+		margin: 25px 0;
+		line-height: 26px;
+		color:#646566;
+	}
+	a {
+		color: $celeste;
+		font-family: $titulo;
+		text-transform: uppercase;
+		font-size: 15px;
+		letter-spacing: 2px;
+		text-align: left;
+		text-decoration: none;
+	}
+}
+
+@mixin imagen_grande($titulo,$color) {
+	li {
+		display: inline-block;
+		width: 30.5%;
+		div {
+			position: relative;
+			img {
+				width: 100%;
+				height: 250px;
+			}
+			p {
+				position: absolute;
+			    top: 50%;
+			    left: 50%;
+			    transform: translate(-50%,-50%);
+				text-align: left;
+				color: $color;
+				font-family: $titulo;
+				font-size: 26px;
+				font-weight: 600;	
+			}
+		}
+	}
+}
+
+@mixin imagen_chico($subtitulo,$texto,$color) {
+	li {
+		display: inline-block;
+		width: 30.5%;
+		div {
+			position: relative;
+			img {
+				width: 100%;
+				height: 225px;
+			}
+			div {
+				position: absolute;
+			    top: 50%;
+			    left: 50%;
+			    transform: translate(-50%,-50%);
+				p {
+					text-transform: uppercase;
+					text-align: center;
+					color: $color;
+					font-family: $subtitulo;
+					font-size: 13px;
+					letter-spacing: 2px;
+					font-weight: 400;
+				}
+				h1 {
+					text-transform: uppercase;
+					color:$color;
+					text-align: center;
+					font-family: $titulo;
+					font-size: 26px;
+					font-weight: 600;
+					line-height: 67px;
+				}
+			}
+		}
+	}
+}
